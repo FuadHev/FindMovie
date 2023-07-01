@@ -13,11 +13,11 @@ import com.fuadhev.findmovie.R
 import com.fuadhev.findmovie.databinding.FragmentHomeBinding
 import com.fuadhev.findmovie.ui.adapter.MovieAdapter
 import com.fuadhev.findmovie.ui.adapter.MovieClickListener
-
+import dagger.hilt.android.AndroidEntryPoint
 
 
 // birinci viewmodelin icin doldurun sonra bura kecin birbasa yazsaz heryer qirmizi olacaq/////
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private val viewModel by viewModels<HomeViewModel>()

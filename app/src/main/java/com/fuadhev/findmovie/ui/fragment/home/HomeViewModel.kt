@@ -5,17 +5,18 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fuadhev.findmovie.model.Result
 import com.fuadhev.findmovie.repo.Repository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeViewModel:ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(val repo:Repository) :ViewModel() {
     val popularMovieList=MutableLiveData<List<Result>>()
     val topRatedMovieList=MutableLiveData<List<Result>>()
     val upcomingMovieList=MutableLiveData<List<Result>>()
 
-    val repo by lazy {
-        Repository()
-    }
+
     init {
         getPopularMovies()
         getTopRatedMovies()

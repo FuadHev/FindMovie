@@ -1,13 +1,16 @@
 package com.fuadhev.findmovie.model
 
+
+
+
 data class MovieResponseById(
+    val id: Int,
     val adult: Boolean,
     val backdrop_path: String,
     val belongs_to_collection: BelongsToCollection,
     val budget: Int,
     val genres: List<Genre>,
     val homepage: String,
-    val id: Int,
     val imdb_id: String,
     val original_language: String,
     val original_title: String,
@@ -17,7 +20,7 @@ data class MovieResponseById(
     val production_companies: List<ProductionCompany>,
     val production_countries: List<ProductionCountry>,
     val release_date: String,
-    val revenue: Int,
+    val revenue: Long,
     val runtime: Int,
     val spoken_languages: List<SpokenLanguage>,
     val status: String,
