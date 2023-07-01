@@ -10,4 +10,8 @@
         android:id="@+id/searchFragment"
         android:icon="@drawable/search"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/no_fav"
+        app:showAsAction="always" />
 </menu>
