@@ -16,7 +16,7 @@ import com.fuadhev.findmovie.ui.adapter.MovieClickListener
 import dagger.hilt.android.AndroidEntryPoint
 
 
-// birinci viewmodelin icin doldurun sonra bura kecin birbasa yazsaz heryer qirmizi olacaq/////
+
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding

@@ -40,7 +40,7 @@ class MovieDetailViewModel @Inject constructor(private val repo: Repository) : V
         }
     }
 
-    fun getFavs() = repo.getAllFavMovies()
+
 
     fun getMovieById(movie_id: Long) {
         viewModelScope.launch(IO) {

@@ -14,5 +14,12 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+
+    </style>
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">#EF0909</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="textFillColor">@android:color/holo_red_dark</item>
     </style>
 </resources>

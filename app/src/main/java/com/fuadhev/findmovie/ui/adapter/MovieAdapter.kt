@@ -37,7 +37,6 @@ class MovieAdapter(private val movieClickListener: MovieClickListener,private va
         val b=holder.view
 
         b.movieCard.setOnClickListener {
-
             movieClickListener.movieClickListener(movie.id)
         }
 

@@ -18,4 +18,5 @@ interface MovieDao {
 
     @Query("SELECT EXISTS(SELECT 1 FROM favorite_movies WHERE id = :movieId LIMIT 1)")
     suspend fun isMovieIdExists(movieId: Int): Boolean
+
 }

@@ -33,9 +33,6 @@ class Repository @Inject constructor(private val db: MovieDao){
       return api.searchMovie(query)
    }
 
-
-
-
    fun getAllFavMovies(): LiveData<List<FavoritMovie>> {
       return db.getAllFavoriteMovies()
    }

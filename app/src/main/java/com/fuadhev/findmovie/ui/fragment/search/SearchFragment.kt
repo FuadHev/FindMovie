@@ -1,10 +1,14 @@
 package com.fuadhev.findmovie.ui.fragment.search
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AutoCompleteTextView
+import android.widget.EditText
 import android.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
@@ -31,6 +35,7 @@ class SearchFragment : Fragment() {
         }, emptyList())
     }
 
+    @SuppressLint("DiscouragedApi")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,6 +47,11 @@ class SearchFragment : Fragment() {
         observes()
         setSearchViewListener()
 
+//        val searchView = binding.searchView
+//        val searchEditTextId = searchView.context.resources.getIdentifier("android:id/search_src_text", null, null)
+//        val searchEditText = searchView.findViewById<EditText>(searchEditTextId)
+//        searchEditText.setTextColor(Color.WHITE)
+//        searchEditText.setHintTextColor(Color.WHITE)
 
         // Inflate the layout for this fragment
         return binding.root
@@ -61,9 +71,7 @@ class SearchFragment : Fragment() {
 
             override fun onQueryTextChange(newText: String): Boolean {
 
-                if (newText.trim() == "") {
-
-                } else {
+                if (newText.trim()!= "") {
                     viewModel.searchMovie(newText)
                 }
                 return true

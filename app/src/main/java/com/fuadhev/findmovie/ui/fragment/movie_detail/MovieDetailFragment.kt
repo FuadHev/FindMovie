@@ -82,15 +82,10 @@ class MovieDetailFragment : Fragment() {
             if (it){
                 binding.favFab.setImageResource(R.drawable.fav)
                 binding.favFab.tag="isfav"
-                Log.e("isfav", "observes: is fav $it ", )
 
             }else{
                 binding.favFab.setImageResource(R.drawable.no_fav)
                 binding.favFab.tag="nofav"
-                Log.e("TAG",(binding.favFab.tag=="nofav").toString())
-                Log.e("nofav", "observes: is fav $it ", )
-
-
             }
         }
 
@@ -112,11 +107,8 @@ class MovieDetailFragment : Fragment() {
             binding.genres.text=genre
 
 
-
-
         }
         viewModel.movieVideoLiveData.observe(viewLifecycleOwner){
-
 
             if (it != null) {
                 adapter.updateList(it)
@@ -124,10 +116,6 @@ class MovieDetailFragment : Fragment() {
 
         }
 
-
-        viewModel.getFavs().observe(viewLifecycleOwner){
-            Log.e("list",it.toString())
-        }
     }
 
 
